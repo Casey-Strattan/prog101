@@ -1,7 +1,7 @@
 ##########################################################################
-## Driver: (Name) (GitHub Handle)                                       ##
+## Driver: (Casey Strattan) (Casey-Strattan)                                       ##
 ## Navigator: (Name) (GitHub Handle)                                    ##
-## Date: (YYYY-MM-DD)                                                   ##
+## Date: (2025-01-09)                                                   ##
 ##########################################################################
 
 library(marinecs100b)
@@ -13,21 +13,25 @@ library(marinecs100b)
 # How was temperature monitored?
 
 # What's the difference between absolute temperature and temperature anomaly?
-
+# Absolute temp is just the temp at any given time without noting or removing
+# any anomalous temps.
 
 # Begin exploring ---------------------------------------------------------
 
 # How many kefj_* vectors are there?
+# six
 
 # How long are they?
+# 1295038
 
 # What do they represent?
+# Different information about the data, site, temperature, tide level, etc
 
 # Link to sketch
 
-???_datetime <- kefj_datetime[kefj_site == ???]
-???_interval <- ???_datetime[-1] - ???_datetime[-???]
-t???e(???)
+Aialik_datetime <- kefj_datetime[kefj_site == "Aialik"]
+common_interval <- Aialik_datetime[-1] - Aialik_datetime[]
+table(common_interval)
 
 
 # Problem decomposition ---------------------------------------------------
@@ -38,8 +42,8 @@ t???e(???)
 
 # Plot the hottest day
 
-hottest_idx <- ???(kefj_temperature)
-hottest_time <- ???[hottest_idx]
+hottest_idx <- which.max(kefj_temperature)
+hottest_time <- kefj_datetime[hottest_idx]
 ??? <- kefj_site[???]
 hotday_start <- as.POSIXct("???", tz = "Etc/GMT+8")
 hotday_end <- as.POSIXct("???", tz = "Etc/GMT+8")
